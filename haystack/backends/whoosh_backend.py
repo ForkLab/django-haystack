@@ -156,7 +156,7 @@ class WhooshSearchBackend(BaseSearchBackend):
                 content_field_name = field_class.index_fieldname
 
             if field_class.mapping:
-                schema_fields[field_class.index_fieldname].update(field_class.mapping)
+                schema_fields[field_class.index_fieldname].mapping = field_class.mapping
 
         # Fail more gracefully than relying on the backend to die if no fields
         # are found.
